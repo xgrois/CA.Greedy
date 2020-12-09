@@ -1,18 +1,10 @@
-# Practising Backtracking
+# Practising Greedy Algorithms
 
-Practising Backtracking (BCKT).
+Practising  Greedy Algorithms.
 
 ## Content
 
-[[1]](/FindLongestPossibleRouteInMatrix) Find longest possible route in matrix.
-
-[[2]](/SudokuSolver) Sudoku solver.
-
-[[3]](/FindPathBetweenVerticesDirectedGraph) Find path between vertices directed graph.
-
-[[4]](/FindShortestPathInAMaze) Find shortest path length in a maze.
-
-
+[[1]](/GraphColoring) Graph Coloring problem.
 
 ## Language
 C#
