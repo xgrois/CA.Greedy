@@ -24,6 +24,40 @@ namespace JobSchedulingWithProfitsAndDeadlines
             return $"{Profit}";
         }
     }
+
+    class UnionFind
+    {
+        private int[] _parent;
+
+        public UnionFind(int L)
+        {
+            _parent = new int[L];
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            for (int i = 0; i < _parent.Length; i++)
+            {
+                _parent[i] = i;
+            }
+        }
+
+        public int Find(int x)
+        {
+            if (x == _parent[x])
+                return x;
+
+            return Find(_parent[x]);
+        }
+
+        public void Union(int a, int b)
+        {
+            _parent[b] = a;
+        }
+
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -45,7 +79,7 @@ namespace JobSchedulingWithProfitsAndDeadlines
             };
 
             int L = 9;
-            (int sol, List<Job> selectedJobs) = Solution.GreedySchedule(list, L);
+            (int sol, List<Job> selectedJobs) = Solution.GreedyScheduleUnionFind(list, L);
             Console.WriteLine($"\n\rSchedule Length = {L}.");
 
             Console.WriteLine("\n\rSlot | Job | Profit");
@@ -88,6 +122,33 @@ namespace JobSchedulingWithProfitsAndDeadlines
 
             return (tot, selectedJobs);
             
+        }
+
+        internal static (int, List<Job>) GreedyScheduleUnionFind(List<Job> list, int L)
+        {
+            // Sort by Profit
+            list.Sort((x, y) => y.Profit.CompareTo(x.Profit));
+
+            // Assign 
+            List<Job> selectedJobs = new List<Job>();
+            int tot = 0;
+            UnionFind UF = new UnionFind(L + 1);
+            foreach (var job in list)
+            {
+                int y = UF.Find(Math.Min(job.Deadline, L));
+
+                if (y > 0)
+                {
+                    job.Slot = y;
+                    selectedJobs.Add(job);
+                    tot += job.Profit;
+
+                    UF.Union(UF.Find(y - 1), y);
+                }
+            }
+
+            return (tot, selectedJobs);
+
         }
     }
 }
