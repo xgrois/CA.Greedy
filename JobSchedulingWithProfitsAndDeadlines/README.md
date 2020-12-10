@@ -14,6 +14,9 @@ subject to:
 
 <img src="https://render.githubusercontent.com/render/math?math=x_i \in \{0,1\}">
 
+where <img src="https://render.githubusercontent.com/render/math?math=d_i"> is the deadline of job i, and <img src="https://render.githubusercontent.com/render/math?math=p_i"> is the profit of job i.
+The whole schedule is capture by <img src="https://render.githubusercontent.com/render/math?math=x_{i,j}"> binary variable.
+
 __Examples of greedy algorithms__
 
 Example of a naive sequential algorithm:
@@ -26,7 +29,7 @@ This problem is considered Medium in literature.
 
 __References__
 
-[[1]](https://www.techiedelight.com/greedy-coloring-graph/) Graph Coloring Problem, Techie Delight.
+[[1]](https://www.techiedelight.com/job-sequencing-problem-deadlines/) Job Sequencing Problem with Deadlines, Techie Delight.
 
 ## Output
 
