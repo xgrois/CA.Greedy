@@ -16,13 +16,15 @@ subject to:
 
 where:
 
-<img src="https://render.githubusercontent.com/render/math?math=d_i"> is the deadline of job i.
+<img src="https://render.githubusercontent.com/render/math?math=d_i"> is the deadline of job i (positive integer >= 1).
 
-<img src="https://render.githubusercontent.com/render/math?math=p_i"> is the profit of job i.
+<img src="https://render.githubusercontent.com/render/math?math=p_i"> is the profit of job i (positive integer >= 0).
 
-<img src="https://render.githubusercontent.com/render/math?math=x_{i,j}"> binary variable defines the schedule.
+<img src="https://render.githubusercontent.com/render/math?math=x_{i,j}"> binary variable defines the schedule (0 or 1).
 
-<img src="https://render.githubusercontent.com/render/math?math=L"> is the maximum length of the schedule.
+<img src="https://render.githubusercontent.com/render/math?math=L"> is the maximum length of the schedule (positive integer >= 0).
+
+Note that each job takes 1 slot to complete always.
 
 __Examples of greedy algorithms__
 
