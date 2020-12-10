@@ -44,7 +44,7 @@ namespace JobSchedulingWithProfitsAndDeadlines
                 new Job(10, 5, 3)
             };
 
-            int L = 6;
+            int L = 9;
             (int sol, List<Job> selectedJobs) = Solution.GreedySchedule(list, L);
             Console.WriteLine($"\n\rSchedule Length = {L}.");
 
