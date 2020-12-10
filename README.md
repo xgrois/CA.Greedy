@@ -14,6 +14,8 @@ when a G-Algorithm is presented.
 
 [[1]](/GraphColoring) Graph Coloring problem.
 
+[[2]](/JobSchedulingWithProfitsAndDeadlines) Job Secheduling with Profits and Deadlines problem.
+
 ## Language
 C#
 
