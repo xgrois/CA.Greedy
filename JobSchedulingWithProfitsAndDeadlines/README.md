@@ -87,6 +87,6 @@ Below is an illustration of the algorithm:
 
 <img src="/JobSchedulingWithProfitsAndDeadlines/union_find.JPG" alt="drawing" width="600"/>
 
-<img src="/JobSchedulingWithProfitsAndDeadlines/example_union_find.JPG" alt="drawing" width="1000"/>
+<img src="/JobSchedulingWithProfitsAndDeadlines/example_union_find.JPG" alt="drawing" width="600"/>
 
 <img src="/JobSchedulingWithProfitsAndDeadlines/example_union_find_2.JPG" alt="drawing" width="1000"/>
